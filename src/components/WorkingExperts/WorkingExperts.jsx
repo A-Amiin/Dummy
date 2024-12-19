@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import figure_working_experts from "../../assets/images/figure1.png";
 import bubble_working_experts from "../../assets/images/bubble1.png";
-import teamOne from "../../assets/images/team1.png";
-
 import SectionTitle from "../SectionTitle/SectionTitle";
 import WorkingExpertsCard from "./WorkingExpertsCard";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchTeam } from "../../network/teamApis";
 function WorkingExperts() {
+
+  const Obj = useSelector((state) => {
+    return state.OurWorkingExperts;
+  });
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTeam())
+  }, [dispatch])
+  // console.log(team);
+
   return (
     <>
       <section className="working_experts position-relative py-5">
@@ -18,30 +29,20 @@ function WorkingExperts() {
             colorParagraph="regular-paragraph"
           />
           <div className="row mt-5 mb-5">
-            {/*Column One */}
-            <WorkingExpertsCard
-              imgSrc={bubble_working_experts}
-              teamImg={teamOne}
-              name="Richard Powel"
-              role="Office Cleaner"
-            />
-            {/*Column Two */}
-            <WorkingExpertsCard
-              imgSrc={bubble_working_experts}
-              teamImg={teamOne}
-              name=" Merry Patel"
-              role="Kitchen Cleaner"
-              responsive="mt-sm-0 mt-4"
-            />
-
-            {/*Column Three */}
-            <WorkingExpertsCard
-              imgSrc={bubble_working_experts}
-              teamImg={teamOne}
-              name=" Johnson Jack"
-              role="Floor Cleaner"
-              responsive="mt-lg-0 mt-4"
-            />
+            {
+              Obj.team.map((member) => {
+                return (
+                  <WorkingExpertsCard
+                    key={member.id}
+                    imgSrc={bubble_working_experts}
+                    teamImg={member.image}
+                    name={member.name}
+                    role={member.role}
+                    responsive="mt-sm-0 mt-4"
+                  />
+                )
+              })
+            }
           </div>
         </div>
       </section>

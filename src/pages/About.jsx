@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router";
 import "../assets/styles/about.css";
 import HeadBanner from "../components/HeadBanner/HeadBanner";
@@ -5,8 +6,23 @@ import cleaningPerson from "../assets/images/cleaning-img.jpg"
 import figure1 from "../assets/images/figure1.png"
 import readMore from "../assets/images/read-more.webp"
 import team2 from "../assets/images/team2.png"
+import WorkingExpertsCard from "../components/WorkingExperts/WorkingExpertsCard";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchTeam } from "../network/teamApis";
+import bubble_working_experts from "../assets/images/bubble1.png";
+
 
 function About() {
+
+	const Obj = useSelector((state) => {
+		return state.OurWorkingExperts;
+	});
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(fetchTeam())
+	}, [dispatch])
+
 	return (
 		<>
 			{/* <!-- banner --> */}
@@ -126,6 +142,20 @@ function About() {
 					</div>
 					<div className="row mt-5 mb-5">
 						{/* Passing with API */}
+						{
+							Obj.team.map((member) => {
+								return (
+									<WorkingExpertsCard
+										key={member.id}
+										imgSrc={bubble_working_experts}
+										teamImg={member.image}
+										name={member.name}
+										role={member.role}
+										responsive="mt-sm-0 mt-4"
+									/>
+								)
+							})
+						}
 					</div>
 				</div>
 			</section>
