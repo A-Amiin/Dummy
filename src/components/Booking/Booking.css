@@ -1,0 +1,76 @@
+@import "../../index.css";
+
+.booking {
+    background-color: azure;
+    padding: 3.5rem 0;
+    margin-bottom: 3em;
+
+    .images {
+        position: relative;
+
+        .image-1,
+        .image-2 {
+            border-radius: 1rem;
+            background-color: var(--main-gray);
+            position: absolute;
+            border: 20px solid var(--main-white);
+            max-width: 400px;
+        }
+
+        .image-1 {
+            left: 100px;
+            top: 150px;
+            transform: rotate(-10deg);
+            z-index: 1;
+        }
+
+        .image-2 {
+            transform: rotate(10deg);
+        }
+    }
+
+    .content {
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-blue);
+            font-weight: 500;
+        }
+
+        p {
+            margin-left: 1em;
+        }
+
+        ul {
+            li {
+                font-weight: bold;
+                margin: 1em;
+
+                i {
+                    color: var(--primary-blue);
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .calls {
+        padding-top: 1em;
+
+        a {
+            margin-left: 1em;
+        }
+
+        .number {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+        }
+    }
+}

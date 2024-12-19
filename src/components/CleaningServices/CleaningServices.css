@@ -1,0 +1,61 @@
+@import "../../index.css";
+
+.cleaning-services {
+    background-image: url(../images/bg-shape1.png);
+    background-size: cover;
+    margin: 5rem 0 0 0;
+
+    .container {
+        .text {
+            max-width: 700px;
+            margin: 3rem auto;
+
+            img {
+                max-width: 40px;
+            }
+
+            h1 {
+                color: var(--primary-blue);
+            }
+        }
+
+        .row {
+            .card-body {
+                position: relative;
+
+                .bg-icon {
+                    position: absolute;
+                    background-color: var(--primary-blue);
+                    top: -30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    min-width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+
+                    i {
+                        color: var(--main-white);
+                        font-size: 2rem;
+                        padding: 10px
+                    }
+                }
+
+                .card-title {
+                    color: var(--primary-blue);
+                }
+
+                ul {
+                    li {
+                        font-weight: bold;
+                        margin: 1em;
+
+                        i {
+                            color: var(--primary-blue);
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

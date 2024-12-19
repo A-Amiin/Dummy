@@ -1,0 +1,302 @@
+{
+    "AffordablePricing": [
+        {
+            "id": 1,
+            "title": "Basic",
+            "price": 90,
+            "description": [
+                "Surfaces Hand Wiped",
+                "Floors Cleaned",
+                "General Dusting",
+                "Doors Cleaned"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Standard",
+            "price": 99,
+            "description": [
+                "Surfaces Hand Wiped",
+                "Floors Cleaned",
+                "General Dusting",
+                "Doors Cleaned"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Premium",
+            "price": 199,
+            "description": [
+                "Surfaces Hand Wiped",
+                "Floors Cleaned",
+                "General Dusting",
+                "Doors Cleaned"
+            ]
+        }
+    ],
+    "Blog": [
+        {
+            "id": 1,
+            "image": "../src/assets/images/Blog/Blogs-card-1.jpg",
+            "date": "24, July, 2019",
+            "role": "Kitchen Cleaning",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 2,
+            "image": "../src/assets/images/Blog/Blogs-card-2.jpg",
+            "date": "24, July, 2019",
+            "role": "Office Cleaning",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 3,
+            "image": "../src/assets/images/Blog/Blogs-card-3.jpg",
+            "date": "24, July, 2019",
+            "role": "Window Cleaning",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 4,
+            "image": "../src/assets/images/Blog/Blogs-card-4.jpg",
+            "date": "24, July, 2019",
+            "role": "Floor Cleaning",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 5,
+            "image": "../src/assets/images/Blog/Blogs-card-5.jpg",
+            "date": "24, July, 2019",
+            "role": "Plumbing Service",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 6,
+            "image": "../src/assets/images/Blog/Blogs-card-6.jpg",
+            "date": "24, July, 2019",
+            "role": "Carwash",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 7,
+            "image": "../src/assets/images/Blog/Blogs-card-7.jpg",
+            "date": "24, July, 2019",
+            "role": "Floor Cleaning",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 8,
+            "image": "../src/assets/images/Blog/Blogs-card-8.jpg",
+            "date": "24, July, 2019",
+            "role": "Plumbing Service",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 9,
+            "image": "../src/assets/images/Blog/Blogs-card-5.jpg",
+            "date": "24, July, 2019",
+            "role": "Carwash",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 10,
+            "image": "../src/assets/images/Blog/Blogs-card-4.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 11,
+            "image": "../src/assets/images/Blog/Blogs-card-6.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 12,
+            "image": "../src/assets/images/Blog/Blogs-card-3.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 13,
+            "image": "../src/assets/images/Blog/Blogs-card-7.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 14,
+            "image": "../src/assets/images/Blog/Blogs-card-2.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 15,
+            "image": "../src/assets/images/Blog/Blogs-card-8.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 16,
+            "image": "../src/assets/images/Blog/Blogs-card-1.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 17,
+            "image": "../src/assets/images/Blog/Blogs-card-2.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 18,
+            "image": "../src/assets/images/Blog/Blogs-card-4.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 19,
+            "image": "../src/assets/images/Blog/Blogs-card-6.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 20,
+            "image": "../src/assets/images/Blog/Blogs-card-8.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 21,
+            "image": "../src/assets/images/Blog/Blogs-card-1.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 22,
+            "image": "../src/assets/images/Blog/Blogs-card-3.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 23,
+            "image": "../src/assets/images/Blog/Blogs-card-5.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "id": 24,
+            "image": "../src/assets/images/Blog/Blogs-card-7.jpg",
+            "date": "24, July, 2019",
+            "title": "What is Best Domain Name for Business",
+            "author": "By Mark Wily",
+            "description": "Some quick example text to build on the and make up the bulk of the card's content Lorem ipsum dolor sit amet consectetur adipisicing."
+        }
+    ],
+    "OurWorkingExperts": [
+        {
+            "id": 1,
+            "image": "../src/assets/images/team1.png",
+            "name": "Richard Powel",
+            "role": "Office Cleaner",
+            "socail": [
+                {
+                    "icon": "facebook",
+                    "link": "https://www.facebook.com/john.doe"
+                },
+                {
+                    "icon": "twitter",
+                    "link": "https://www.twitter.com/johndoe"
+                },
+                {
+                    "icon": "instagram",
+                    "link": "https://www.instagram.com/johndoe"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "image": "../src/assets/images/team1.png",
+            "name": "Merry Patel",
+            "role": "Kitchen Cleaner",
+            "socail": [
+                {
+                    "icon": "facebook",
+                    "link": "https://www.facebook.com/john.doe"
+                },
+                {
+                    "icon": "twitter",
+                    "link": "https://www.twitter.com/johndoe"
+                },
+                {
+                    "icon": "instagram",
+                    "link": "https://www.instagram.com/johndoe"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "image": "../src/assets/images/team1.png",
+            "name": "Johnson Jack",
+            "role": "Floor Cleaner",
+            "socail": [
+                {
+                    "icon": "facebook",
+                    "link": "https://www.facebook.com/john.doe"
+                },
+                {
+                    "icon": "twitter",
+                    "link": "https://www.twitter.com/johndoe"
+                },
+                {
+                    "icon": "instagram",
+                    "link": "https://www.instagram.com/johndoe"
+                }
+            ]
+        }
+    ]
+}

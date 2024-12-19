@@ -1,0 +1,13 @@
+aside {
+	.aside-card {
+		background-color: var(--main-white);
+	}
+}
+/* questions-form */
+.questions-form-card {
+	.questions-form-control {
+		padding: 1rem;
+		border: 1px solid var(--main-white);
+		width: 100%;
+	}
+}

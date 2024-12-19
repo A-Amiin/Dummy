@@ -1,0 +1,73 @@
+@import url(./home.css);
+/*  */
+html,
+body {
+    overflow-x: hidden;
+} 
+
+
+.Quote {
+    background-color: var(--main-yellow);
+    border-radius: 0;
+    color: var(--primary-blue);
+}
+
+.Quote:hover {
+    color: black;
+    background-color: #fff200;
+}
+
+.bg-main {
+    background-color: var(--primary-blue);
+    color: var(--main-white);
+}
+
+.active {
+    font-weight: 600;
+    color: var(--primary-blue) !important;
+}
+/*  */
+.contact i{
+    color: var(--secondary-blue);
+    font-size: 20px;
+    font-weight: bold;
+}
+.contact h5{
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+.contact p{
+    color: var(--main-paragraph);
+}
+.mess{
+    background-color: var(--main-white);
+    
+}
+.mess .title::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5px;
+    background-color: var(--secondary-blue);
+    width: 3px;
+    height: 22px;
+}
+.mess h5{
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+.ques i
+{
+  position: absolute;
+  left: 8px;
+  top: 15px;
+  color: var(--main-paragraph);
+}
+.mess button{
+    background-color: var(--main-yellow);
+    text-align: center;
+    font-weight: bold;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}

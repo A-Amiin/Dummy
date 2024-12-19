@@ -1,0 +1,16 @@
+@import "../../index.css";
+
+.estimate-section {
+    background-color: var(--primary-blue);
+    color: var(--main-white);
+    position: relative;
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .img-bubble {
+        position: absolute;
+        bottom: 0;
+    }
+}

@@ -1,0 +1,35 @@
+/* head-banner */
+
+.head-banner {
+	background-color: var(--secondary-blue);
+	color: #ffff;
+}
+
+.head-banner-header {
+	margin: 0;
+	line-height: 1.4;
+	font-weight: 600;
+	font-size: 2.6rem;
+}
+
+.head-banner-breadcrumb {
+	padding-inline: 0.25rem;
+	a {
+		color: var(--main-white);
+		text-decoration: none;
+	}
+}
+
+.head-banner-breadcrumb:hover {
+	a {
+		cursor: pointer;
+		color: var(--main-yellow);
+	}
+}
+
+.head-banner-breadcrumb.current {
+	a {
+		color: var(--main-yellow);
+		text-decoration: none;
+	}
+}

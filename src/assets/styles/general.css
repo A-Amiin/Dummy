@@ -1,0 +1,113 @@
+:root {
+	--primary-blue: #14287b;
+	--secondary-blue: #2880fb;
+	--main-yellow: #fef22e;
+	--main-white: #f8f8f8;
+	--main-gray: #d7d6d0;
+	--main-paragraph: #646464;
+}
+
+* {
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+
+/* ------------------- */
+/* reset    */
+/* ------------------- */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	font-weight: 400;
+}
+
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+.flex {
+	display: flex;
+}
+
+.grid {
+	display: grid;
+}
+
+.heading {
+	font-size: 4rem;
+	font-weight: 700;
+	color: var(--main-white);
+}
+
+.sub-heading {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.regular-paragraph {
+	color: var(--main-paragraph);
+}
+
+/* ------------------- */
+/* general   */
+/* ------------------- */
+
+body {
+	font-family: "Inter", sans-serif;
+	min-height: 100vh;
+}
+
+/* head-banner */
+
+.head-banner {
+	background-color: var(--secondary-blue);
+	color: #ffff;
+}
+
+.head-banner-header {
+	line-height: 1.4;
+	font-weight: 600;
+	font-size: 2.6rem;
+}
+
+.head-banner-breadcrumb {
+	a {
+		color: var(--main-white);
+		text-decoration: none;
+	}
+}
+
+.head-banner-breadcrumb:hover {
+	a {
+		cursor: pointer;
+		color: var(--main-yellow);
+	}
+}
+
+.head-banner-breadcrumb__current {
+	a {
+		color: var(--main-yellow);
+		text-decoration: none;
+	}
+}

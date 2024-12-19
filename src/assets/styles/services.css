@@ -1,0 +1,77 @@
+main {
+    min-height: 100vh;
+}
+
+.main-container {
+    background-image: url("../images/bg-shape1.png");
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.card {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2em;
+    position: relative;
+}
+
+.card p,
+.second-section {
+    color: var(--primary-blue);
+}
+
+.card p {
+    margin-top: 2em;
+    font-weight: 600;
+}
+
+.icon-container {
+    background: var(--primary-blue);
+    width: 60px;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    bottom: 60px;
+}
+
+.icon-container img {
+    width: 25px;
+}
+
+.second-section {
+    background-color: var(--main-gray);
+    height: 250px;
+}
+
+.second-section .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.second-section h2 {
+    font-weight: 300;
+}
+
+.second-section h2 b {
+    font-weight: 700;
+}
+
+.second-section .primary-btn {
+    align-self: flex-start;
+    background-color: var(--main-yellow);
+    color: black;
+}

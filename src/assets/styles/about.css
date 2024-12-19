@@ -1,0 +1,140 @@
+@import url("general.css");
+
+.know-about-us {
+
+  h2,
+  h4 {
+    color: var(--primary-blue);
+    font-weight: bold;
+  }
+
+  h5 {
+    color: var(--secondary-blue);
+  }
+
+  .features .features-card p {
+    color: var(--main-white);
+    margin-block: 1rem;
+  }
+
+  i {
+    color: var(--secondary-blue);
+    font-size: 1.5rem;
+    margin-right: 0.2rem;
+  }
+
+  .semi-paragraph {
+    margin-left: 1rem;
+  }
+}
+
+.features {
+  background-color: #14287b;
+  color: white;
+
+  .features-card {
+    background-color: #287ff9;
+  }
+
+  i {
+    background-color: #14287b;
+    border-radius: 50%;
+    color: yellow;
+    font-size: 2.5rem;
+  }
+}
+
+.our-working-experts {
+  .image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+    background-color: #007bffab;
+  }
+
+  .img-hide {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .bubble-overlay {
+    position: absolute;
+    top: -37%;
+    left: -40%;
+    width: 100%;
+    height: 100%;
+    background: url("../images/bubble1.png") no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .person-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+}
+
+
+.how-it-works {
+  text-align: center;
+
+  .material-icons-outlined {
+    color: var(--secondary-blue);
+    font-size: 4rem;
+
+  }
+
+  h3,
+  h5 {
+    color: var(--primary-blue);
+    font-weight: bold;
+    margin-block: 1rem;
+  }
+
+  .bubble {
+    /* width: 100%; */
+    /* height: 100%; */
+    background: url("../images/rb_43058.png") no-repeat center center;
+    background-size: cover;
+    padding: 7rem;
+
+    svg {
+      color: #006aff;
+    }
+  }
+}
+
+
+.get-started {
+  button {
+    background-color: yellow;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    text-wrap: nowrap;
+
+  }
+
+  button:hover {
+    background-color: white;
+    color: #006aff;
+    transition: ease-in-out 0.3s;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}

@@ -1,0 +1,31 @@
+@import "../../index.css";
+
+.requsting-estimate-section {
+    margin-bottom: 4rem;
+
+    .content {
+        .header {
+            color: var(--primary-blue);
+            font-size: 2.8rem;
+        }
+
+        .list {
+            ul {
+                li {
+                    .sub-heading {
+                        color: var(--primary-blue);
+                        font-size: 1.5rem;
+
+                        .fa-check {
+                            font-size: 1.2rem;
+                            color: var(--secondary-blue);
+                            border: 4px solid var(--secondary-blue);
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

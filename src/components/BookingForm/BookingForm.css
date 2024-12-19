@@ -1,0 +1,23 @@
+@import "../../index.css";
+
+.form {
+    background-color: var(--secondary-blue);
+    border-radius: 5px;
+
+    .sub-heading {
+        color: var(--main-white);
+    }
+
+    .two-input-at-row {
+        display: flex;
+        gap: 0.2rem;
+        /* Add gap between input fields */
+
+        .form-control {
+            max-width: 80%;
+            /* Limit max width of the inputs */
+            margin: auto 3px;
+            /* Optional: Space between inputs */
+        }
+    }
+}

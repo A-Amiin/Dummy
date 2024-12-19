@@ -1,0 +1,223 @@
+@import url(./home.css);
+
+/*  */
+html,
+body {
+	overflow-x: hidden;
+}
+
+/* header */
+.Quote {
+	background-color: var(--main-yellow);
+	border-radius: 0;
+	color: var(--primary-blue);
+}
+
+.Quote:hover {
+	color: black;
+	background-color: #fff200;
+}
+
+.bg-main {
+	background-color: var(--primary-blue);
+	color: var(--main-white);
+}
+
+.active {
+	font-weight: 600;
+	color: var(--primary-blue) !important;
+}
+
+/*  */
+
+/*  */
+.celep i {
+	color: var(--secondary-blue);
+}
+
+h3,
+.name span,
+.left p:first-child,
+.right p:first-child {
+	color: var(--primary-blue);
+	font-weight: bold;
+}
+
+.people {
+	position: relative;
+}
+
+.people img,
+.mess img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.people::before {
+	content: "";
+	position: absolute;
+	left: -17px;
+	top: 22px;
+	width: 25px;
+	height: 3px;
+	background-color: var(--primary-blue);
+}
+
+.people span,
+.love span,
+.comment span {
+	color: var(--main-paragraph);
+}
+
+.rate i,
+.right i,
+.data i {
+	color: var(--main-paragraph);
+}
+
+/* mess boxs */
+.mess {
+	background-color: var(--main-white);
+}
+
+.mess q {
+	font-size: 20px;
+	font-style: italic;
+	line-height: 2;
+	color: #010932;
+	font-weight: bold;
+}
+
+.mess .title::before,
+.post .title::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -5px;
+	background-color: var(--secondary-blue);
+	width: 3px;
+	height: 22px;
+}
+
+.mess h6,
+.post h5,
+.part2 h5 {
+	color: var(--primary-blue);
+	font-weight: bold;
+}
+
+.mess span {
+	color: var(--secondary-blue);
+}
+
+.name::before {
+	content: "";
+	position: absolute;
+	background-color: var(--secondary-blue);
+	width: 25px;
+	height: 3px;
+	left: -10px;
+	top: 10px;
+}
+
+.women img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+.data h5 {
+	color: var(--secondary-blue);
+	font-weight: bold;
+}
+
+/*  */
+.parts img {
+	width: 140px;
+	height: 120px;
+	border-radius: 8px;
+}
+
+.parts p {
+	color: black;
+	font-weight: bold;
+}
+
+.parts span,
+.parts i {
+	color: var(--secondary-blue);
+}
+
+.parts span:last-child {
+	color: var(--main-paragraph);
+}
+
+.parts span:last-child i {
+	color: var(--primary-blue);
+}
+
+/* form */
+.main-cont {
+	p {
+		color: var(--main-paragraph);
+	}
+
+	input,
+	textarea {
+		background-color: #ededed;
+		border: none;
+	}
+}
+
+.post button,
+.email button {
+	background-color: var(--main-yellow);
+	text-align: center;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* parttwo  aside*/
+.search i {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	color: var(--primary-blue);
+}
+
+ul {
+	list-style-type: none;
+}
+
+.category i,
+.category span,
+.recent span,
+.recent i {
+	color: var(--main-paragraph);
+}
+
+/* recent */
+.recent p {
+	color: var(--primary-blue);
+	font-weight: bold;
+}
+
+/* thirdemail */
+.email {
+	background-color: var(--primary-blue);
+	text-align: center;
+	color: white;
+}
+
+.email img {
+	width: 100px;
+}
+
+/* archieve */
+.archieve span,
+.tags span {
+	color: var(--main-paragraph);
+}
