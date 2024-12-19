@@ -1,19 +1,30 @@
-import React from "react";
-import { Link } from "react-router";
-import Card1 from "../assets/images/Blog/Blogs-card-1.jpg";
-import Card2 from "../assets/images/Blog/Blogs-card-2.jpg";
-import Card3 from "../assets/images/Blog/Blogs-card-3.jpg";
-import Card4 from "../assets/images/Blog/Blogs-card-4.jpg";
-import Card5 from "../assets/images/Blog/Blogs-card-5.jpg";
-import Card6 from "../assets/images/Blog/Blogs-card-6.jpg";
-import Card7 from "../assets/images/Blog/Blogs-card-7.jpg";
-import Card8 from "../assets/images/Blog/Blogs-card-8.jpg";
+import React, { useEffect } from "react";
 import Newsletter from "../assets/images/Blog/Newsletter.svg";
 import Aside from "../components/Aside/AsideBlog";
 import HeadBanner from "../components/HeadBanner/HeadBanner";
 
+import { useSelector, useDispatch } from "react-redux";
+import { fetchBlogDetails } from "../network/blogApis";
+import BlogCard from "../components/BlogCard/BlogCard";
+
 function Blog() {
-	const cards = [Card1, Card2, Card3, Card4, Card5, Card6, Card7, Card8];
+	const blogsList = useSelector((state) => {
+		return state.Blog;
+	});
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(fetchBlogDetails({ page: 1, limit: 8 }));
+	}, [dispatch]);
+
+	const handlePaginationClick = (pageNumber) => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		});
+
+		dispatch(fetchBlogDetails({ page: pageNumber, limit: 8 }));
+	};
 
 	return (
 		<>
@@ -26,48 +37,21 @@ function Blog() {
 						<div className="col-lg-8">
 							{/* Blog Cards */}
 							<div className="row blog-card">
-								{Array.from({ length: 8 }, (_, index) => (
-									<div className="col-md-6 mb-4 " key={index}>
-										<Link to={"blog-details"}>
-											<div className="card shadow hover-shadow-lg cursor-pointer hover-card transition h-100">
-												<div className="card-img">
-													<img
-														src={cards[index]}
-														className="card-img-top transition"
-														alt={`Blogs-card-${index + 1}`}
-													/>
-												</div>
-												<div className="card-body">
-													<span>
-														<i className="fa-solid fa-calendar-days"></i> 24,
-														July, 2019
-													</span>
-													<h5 className="card-title">
-														What is Best Domain Name for Business
-													</h5>
-													<span className="card-text-title">By Mark Wily</span>
-													<p className="card-text">
-														Some quick example text to build on the and make up
-														the bulk of the card's content Lorem ipsum dolor sit
-														amet consectetur adipisicing.
-													</p>
-													<div className="card-footer pb-0 mt-3">
-														<div>
-															<i className="fa-solid fa-heart"></i>
-															<span className="text-dark fw-bold">06</span>
-															<span>Likes</span>
-														</div>
-														<div>
-															<i className="fa-solid fa-comment"></i>
-															<span className="text-dark fw-bold">02</span>
-															<span>comments</span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</Link>
-									</div>
-								))}
+								{blogsList.blogDetails.map((blog) => {
+									return (
+										<div className="col-md-6 mb-4 " key={blog.id}>
+											<BlogCard
+												key={blog.id}
+												imgSrc={blog.image}
+												date={blog.date}
+												title={blog.title}
+												author={blog.author}
+												description={blog.description}
+												linkLocation={"blog-details"}
+											/>
+										</div>
+									);
+								})}
 							</div>
 						</div>
 
@@ -232,11 +216,12 @@ function Blog() {
 					{/* Pagination */}
 					<div className="container pagination mx-auto">
 						<div className="btn-group mx-auto" role="group">
-							{Array.from({ length: 4 }, (_, index) => (
+							{Array.from({ length: 3 }, (_, index) => (
 								<button
 									type="button"
 									className="btn btn-primary rounded-1 mx-1"
 									key={index}
+									onClick={() => handlePaginationClick(index + 1)}
 								>
 									{index + 1}
 								</button>
