@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import bubble_affordable_pricing from "../../assets/images/bubble1.png";
 import figure_affordable_pricing from "../../assets/images/figure1.png";
 import SectionTitle from "../SectionTitle/SectionTitle";
@@ -42,6 +42,7 @@ function AffordablePricing() {
             {subscription.subscriptionData.map((subscripe) => (
               <AffordablePricingCard
                 key={subscripe.id}
+                subscripeId= {subscripe.id}
                 imgSrc={bubble_affordable_pricing}
                 title={subscripe.title}
                 price={subscripe.price}

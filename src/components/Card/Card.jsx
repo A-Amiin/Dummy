@@ -8,7 +8,7 @@ function Card({service}) {
 				<div className="icon-container position-absolute">
 					<img src={cleanIcon} alt="clean icon" />
 				</div>
-				<Link to="service-details" className="text-decoration-none text-center">
+				<Link to={`service-details/${service.id}`} className="text-decoration-none text-center">
 					<img src={service.image} alt="" className="card-img" />
 					<p className="text-capitalize">{service.role}</p>
 				</Link>

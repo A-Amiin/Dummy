@@ -10,6 +10,9 @@ import Booking from "../pages/Booking";
 import ScrollToTop from "../routes/ScrollToTop";
 import { BrowserRouter, Route, Routes } from "react-router";
 import Layout from "../routes/Layout";
+import AffordablePricingCard from '../components/AffordablePricing/AffordablePricingCard';
+import AffordablePricing from '../components/AffordablePricing/AffordablePricing';
+import Subscription from '../pages/Subscription';
 const AppRouter = () => {
     return (
         <BrowserRouter>
@@ -20,10 +23,11 @@ const AppRouter = () => {
                     <Route path="blog" element={<Blog />} />
                     <Route path="blog/blog-details" element={<BlogDetails />} />
                     <Route path="services" element={<Services />} />
-                    <Route path="services/service-details" element={<ServiceDetails />} />
+                    <Route path="services/service-details/:serviceId" element={<ServiceDetails />} />
                     <Route path="about" element={<About />} />
                     <Route path="contact" element={<Contact />} />
                     <Route path="Booking-Form" element={<Booking />} />
+                    <Route path="subscription/:subscriptionId" element={<Subscription />} />
                 </Route>
             </Routes>
         </BrowserRouter>

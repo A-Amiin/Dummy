@@ -1,10 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getServicesData } from "../../network/servicesApis";
+import {
+  getServicesData,
+  viewServicesDetails,
+} from "../../network/servicesApis";
 
 const servicesSlice = createSlice({
   name: "services",
   initialState: {
     servicesData: [],
+    servicesDetailsData: [],
     loading: false,
   },
   reducers: {},
@@ -19,9 +23,19 @@ const servicesSlice = createSlice({
       })
       .addCase(getServicesData.rejected, (state) => {
         state.loading = false;
+      })
+      .addCase(viewServicesDetails.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(viewServicesDetails.fulfilled, (state, action) => {
+        state.servicesDetailsData = action.payload;
+        state.loading = false;
+      })
+      .addCase(viewServicesDetails.rejected, (state) => {
+        state.loading = false;
       });
   },
 });
 
-export { getServicesData };
+export { getServicesData, viewServicesDetails };
 export default servicesSlice.reducer;

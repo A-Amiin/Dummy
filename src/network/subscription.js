@@ -8,3 +8,13 @@ export const fetchSubscriptionData = createAsyncThunk(
     return response.data;
   }
 );
+
+export const viewSubscriptionData = createAsyncThunk(
+  "viewSubscriptionData/fetchSubscriptionData",
+  async (id) => {
+    const response = await axios.get(
+      `http://localhost:3000/AffordablePricing/${id}`
+    );
+    return response.data;
+  }
+);

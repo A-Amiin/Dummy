@@ -1,21 +1,13 @@
-import React from "react";
+
 import { Link } from "react-router";
 
-function AffordablePricingCard({subscripeId,imgSrc, title, price, description}) {
+function AffordablePricingDetails({imgSrc, title, price, description }) {
   return (
     <div className="col-12 col-sm-6 col-lg-4 mt-sm-3 mt-4">
       <div className="card overflow-hidden rounded-0 shadow-sm position-relative">
         <div className="affordable_pricing_img w-100 position-relative">
-          <img
-            className="position-absolute"
-            src={imgSrc}
-            alt="bubble1"
-          />
-          <img
-            className="position-absolute"
-            src={imgSrc}
-            alt="bubble1"
-          />
+          <img className="position-absolute" src={imgSrc} alt="bubble1" />
+          <img className="position-absolute" src={imgSrc} alt="bubble1" />
           <svg
             className="position-absolute svg"
             xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +63,7 @@ function AffordablePricingCard({subscripeId,imgSrc, title, price, description}) 
                 className="text-decoration-none mx-2 regular-paragraph"
                 href="#"
               >
-              {description[1]}
+                {description[1]}
               </a>
             </li>
             <li className="mt-3">
@@ -80,7 +72,7 @@ function AffordablePricingCard({subscripeId,imgSrc, title, price, description}) 
                 className="text-decoration-none mx-2 regular-paragraph"
                 href="#"
               >
-              {description[2]}
+                {description[2]}
               </a>
             </li>
             <li className="mt-3">
@@ -89,7 +81,7 @@ function AffordablePricingCard({subscripeId,imgSrc, title, price, description}) 
                 className="text-decoration-none mx-2 regular-paragraph"
                 href="#"
               >
-              {description[3]}
+                {description[3]}
               </a>
             </li>
             <li className="mt-3">
@@ -98,17 +90,17 @@ function AffordablePricingCard({subscripeId,imgSrc, title, price, description}) 
                 className="text-decoration-none mx-2 regular-paragraph"
                 href="#"
               >
-              {description[4]}
+                {description[4]}
               </a>
             </li>
           </ul>
           <p className="price text-center fw-bold mt-4 fs-3">{price}$</p>
           <p className="regular-paragraph text-center fs-p">/per mo</p>
           <Link
-            to={`subscription/${subscripeId}`}
+            to='/'
             className="get_it py-2 px-4 mb-3 text-decoration-none text-center fw-medium rounded-2 mt-4 text-black d-block"
           >
-            Get it now
+            Back to home
           </Link>
         </div>
       </div>
@@ -116,4 +108,4 @@ function AffordablePricingCard({subscripeId,imgSrc, title, price, description}) 
   );
 }
 
-export default AffordablePricingCard;
+export default AffordablePricingDetails;
