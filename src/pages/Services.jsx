@@ -2,8 +2,20 @@ import { Link } from "react-router";
 import "../assets/styles/services.css";
 import Card from "../components/Card/Card";
 import HeadBanner from "../components/HeadBanner/HeadBanner";
-
+import { useEffect } from "react";
+import { getServicesData } from "../network/servicesApis";
+import { useSelector, useDispatch } from "react-redux";
 export default function Services() {
+	const services = useSelector((state) => {
+		return state.services;
+	  });
+	  const dispatch = useDispatch();
+	
+	  useEffect(() => {
+		dispatch(getServicesData())
+	  }, [dispatch])
+
+	  console.log(services.servicesData);
 	return (
 		<>
 			{/* <!-- banner --> */}
@@ -12,8 +24,8 @@ export default function Services() {
 			<div className="main-container">
 				<section className="container py-5">
 					<div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-gap-4">
-						{[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
-							<Card key={item} />
+						{services.servicesData.map((service) => (
+							<Card key={service.id} service = {service} />
 						))}
 					</div>
 				</section>
