@@ -29,7 +29,7 @@ function LatestBlogs() {
 					{Array.isArray(blogsList.blogDetails) &&
 					blogsList.blogDetails.length > 0 ? (
 						blogsList.blogDetails.map((blog) => (
-							<div className="col-md-6 mb-4" key={blog.id}>
+							<div className="col-md-4 mb-4" key={blog.id}>
 								<BlogCard
 									blogId={blog.id}
 									imgSrc={blog.image}
