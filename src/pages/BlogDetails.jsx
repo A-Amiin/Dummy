@@ -3,17 +3,35 @@ import "../assets/styles/blog-details.css";
 import man1 from "../assets/images/blog-details/man-1.jpg";
 import cleaning1 from "../assets/images/blog-details/cleaning1.avif";
 import cleaning2 from "../assets/images/blog-details/cleaning2.avif";
-import blogDetails from "../assets/images/blog-details/blog-details.png";
 import woman1 from "../assets/images/blog-details/woman-1.jpeg";
 import woman2 from "../assets/images/blog-details/woman-2.jpeg";
 import NewsLetter from "../assets/images/Blog/Newsletter.svg";
 import HeadBanner from "../components/HeadBanner/HeadBanner";
+import { useParams } from "react-router";
+import { useEffect } from "react";
+import { fetchSingleBlog } from "../network/blogApis";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router";
 
 export default function BlogDetails() {
+	const location = useLocation();
+	const segments = location.pathname.split("/");
+	const { id } = useParams();
+	const dispatch = useDispatch();
+	const selectedBlog = useSelector((state) => {
+		return state.Blog;
+	});
+
+	const { image, author, date, role, ...rest } = selectedBlog.blogDetails;
+
+	useEffect(() => {
+		dispatch(fetchSingleBlog(id));
+	}, [dispatch, id]);
+
 	return (
 		<>
 			{/* <!-- banner --> */}
-			<HeadBanner currPage={"Modern Rules Of Hygienic Cleaning"} />
+			<HeadBanner prevPage={segments[1]} currPage={role} />
 
 			<div className="main-cont">
 				<div className="container my-5">
@@ -23,7 +41,7 @@ export default function BlogDetails() {
 								<article>
 									<div className="image">
 										<img
-											src={blogDetails}
+											src={image}
 											className="rounded"
 											width="100%"
 											alt="Blog Detail"
@@ -31,14 +49,14 @@ export default function BlogDetails() {
 									</div>
 									<div className="date my-3">
 										<i className="fa-solid fa-calendar-days"></i>
-										<span className="ms-2">24 July, 2019</span>
+										<span className="ms-2">{date}</span>
 									</div>
 									<header>
-										<h3>Modern Rules Of Hygienic Cleaning</h3>
+										<h3 className="fw-bold blog-heading">{role}</h3>
 										<div className="rate d-flex my-3">
-											<div className="author d-flex align-items-center">
-												<img src={man1} alt="Author" className="ms-3" />
-												<span>By Mark Wily</span>
+											<div className="author d-flex align-items-center people">
+												<img src={man1} alt="Author" className="mx-3" />
+												<span>{author}</span>
 											</div>
 											<div className="likes d-flex align-items-center ms-3">
 												<i className="fa-solid fa-heart"></i>
@@ -407,20 +425,6 @@ export default function BlogDetails() {
 									</Aside>
 								</div>
 							</div>
-						</div>
-					</div>
-
-					<div className="container pagination mx-auto">
-						<div className="btn-group mx-auto" role="group">
-							{Array.from({ length: 4 }, (_, index) => (
-								<button
-									type="button"
-									className="btn btn-primary rounded-1 mx-1"
-									key={index}
-								>
-									{index + 1}
-								</button>
-							))}
 						</div>
 					</div>
 				</div>
