@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 import "./HeadBanner.css";
 
-export default function HeadBanner({ currPage }) {
+export default function HeadBanner({ prevPage, currPage }) {
 	return (
 		<>
 			<header className="head-banner text-center py-5">
@@ -12,46 +12,22 @@ export default function HeadBanner({ currPage }) {
 						<span className="head-banner-breadcrumb">
 							<Link to="/">Home</Link>
 						</span>
-						{currPage === "Kitchen Cleaning Services" ? (
+						<span>
+							<i className="fa fa-angle-double-right"> </i>
+						</span>
+						{prevPage && (
 							<>
-								<span>
-									<i className="fa fa-angle-double-right"> </i>
-								</span>
-								<span className="head-banner-breadcrumb">
-									<Link to="../blog">Services</Link>
+								<span className="head-banner-breadcrumb text-capitalize">
+									<Link to="/">{prevPage}</Link>
 								</span>
 								<span>
-									<i className="fa fa-angle-double-right"> </i>
-								</span>
-								<span className="head-banner-breadcrumb current">
-									<Link to={{}}>{currPage}</Link>
-								</span>
-							</>
-						) : currPage === "Modern Rules Of Hygienic Cleaning" ? (
-							<>
-								<span>
-									<i className="fa fa-angle-double-right"> </i>
-								</span>
-								<span className="head-banner-breadcrumb">
-									<Link to="../blog">Blog</Link>
-								</span>
-								<span>
-									<i className="fa fa-angle-double-right"> </i>
-								</span>
-								<span className="head-banner-breadcrumb current">
-									<Link to={{}}>{currPage}</Link>
-								</span>
-							</>
-						) : (
-							<>
-								<span>
-									<i className="fa fa-angle-double-right"> </i>
-								</span>
-								<span className="head-banner-breadcrumb current">
-									<Link to={{}}>{currPage}</Link>
+									<i className="fa fa-angle-double-right"></i>
 								</span>
 							</>
 						)}
+						<span className="head-banner-breadcrumb current">
+							<Link to={{}}>{currPage}</Link>
+						</span>
 					</div>
 				</div>
 			</header>

@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Newsletter from "../assets/images/Blog/Newsletter.svg";
 import Aside from "../components/Aside/AsideBlog";
 import HeadBanner from "../components/HeadBanner/HeadBanner";
-
 import { useSelector, useDispatch } from "react-redux";
 import { fetchBlogDetails } from "../network/blogApis";
 import BlogCard from "../components/BlogCard/BlogCard";
