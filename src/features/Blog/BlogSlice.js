@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchBlogDetails } from "../../network/blogApis";
+import { fetchBlogDetails, fetchSingleBlog } from "../../network/blogApis";
 
 const BlogSlice = createSlice({
 	name: "Blog",
@@ -25,9 +25,23 @@ const BlogSlice = createSlice({
 				state.status = "failed";
 				state.error = action.error.message;
 				state.loading = false;
+			})
+			.addCase(fetchSingleBlog.pending, (state) => {
+				state.status = "loading";
+				state.loading = true;
+			})
+			.addCase(fetchSingleBlog.fulfilled, (state, action) => {
+				state.status = "succeeded";
+				state.blogDetails = action.payload;
+				state.loading = false;
+			})
+			.addCase(fetchSingleBlog.rejected, (state, action) => {
+				state.status = "failed";
+				state.error = action.error.message;
+				state.loading = false;
 			});
 	}
 });
 
 export default BlogSlice.reducer;
-export { fetchBlogDetails };
+export { fetchBlogDetails, fetchSingleBlog };

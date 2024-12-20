@@ -16,9 +16,9 @@ export default function Contact() {
 							width="100%"
 							height="450"
 							style={{ border: 0 }}
-							allowfullscreen=""
+							allowFullScreen=""
 							loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"
+							referrerPolicy="no-referrer-when-downgrade"
 						></iframe>
 						<div className="row my-4 contact">
 							<div className="col-md-4 flex">

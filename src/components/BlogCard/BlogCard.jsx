@@ -3,18 +3,18 @@ import { Link } from "react-router";
 import "../../assets/styles/blog.css";
 
 export default function BlogCard({
+	blogId,
 	imgSrc,
 	date,
 	title,
 	author,
-	description,
-	linkLocation
+	description
 }) {
 	return (
 		<>
 			<div className="card shadow hover-shadow-lg cursor-pointer hover-card transition h-100">
 				<div className="card-img">
-					<Link to={linkLocation}>
+					<Link to={`/blog/${blogId}`}>
 						<img
 							src={imgSrc}
 							className="card-img-top transition"
@@ -26,7 +26,7 @@ export default function BlogCard({
 					<span>
 						<i className="fa-solid fa-calendar-days"></i> {date}
 					</span>
-					<Link to={linkLocation}>
+					<Link to={`/blog/${blogId}`}>
 						<h5 className="card-title">{title}</h5>
 					</Link>
 					<span className="card-text-title">{author}</span>

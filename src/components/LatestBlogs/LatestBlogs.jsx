@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import figure_latest_blogs from "../../assets/images/figure1.png";
-import blogOne from "../../assets/images/blog1.jpg";
-import LatestBlogsCard from "./LatestBlogsCard";
-
 import { useSelector, useDispatch } from "react-redux";
 import { fetchBlogDetails } from "../../network/blogApis";
 import BlogCard from "../BlogCard/BlogCard";
@@ -29,21 +26,23 @@ function LatestBlogs() {
 					colorParagraph="regular-paragraph"
 				/>
 				<div className="row mt-5 blog-card">
-					{blogsList.blogDetails.map((blog) => {
-						return (
-							<div className="col-md-4 mb-4 " key={blog.id}>
+					{Array.isArray(blogsList.blogDetails) &&
+					blogsList.blogDetails.length > 0 ? (
+						blogsList.blogDetails.map((blog) => (
+							<div className="col-md-6 mb-4" key={blog.id}>
 								<BlogCard
-									key={blog.id}
+									blogId={blog.id}
 									imgSrc={blog.image}
 									date={blog.date}
 									title={blog.title}
 									author={blog.author}
 									description={blog.description}
-									linkLocation={"blog/blog-details"}
 								/>
 							</div>
-						);
-					})}
+						))
+					) : (
+						<p>No blogs available at the moment. Please check back later.</p>
+					)}
 				</div>
 			</div>
 		</section>

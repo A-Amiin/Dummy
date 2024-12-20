@@ -37,21 +37,25 @@ function Blog() {
 						<div className="col-lg-8">
 							{/* Blog Cards */}
 							<div className="row blog-card">
-								{blogsList.blogDetails.map((blog) => {
-									return (
-										<div className="col-md-6 mb-4 " key={blog.id}>
+								{Array.isArray(blogsList.blogDetails) &&
+								blogsList.blogDetails.length > 0 ? (
+									blogsList.blogDetails.map((blog) => (
+										<div className="col-md-6 mb-4" key={blog.id}>
 											<BlogCard
-												key={blog.id}
+												blogId={blog.id}
 												imgSrc={blog.image}
 												date={blog.date}
 												title={blog.title}
 												author={blog.author}
 												description={blog.description}
-												linkLocation={"blog-details"}
 											/>
 										</div>
-									);
-								})}
+									))
+								) : (
+									<p>
+										No blogs available at the moment. Please check back later.
+									</p>
+								)}
 							</div>
 						</div>
 
