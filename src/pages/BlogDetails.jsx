@@ -423,20 +423,6 @@ export default function BlogDetails() {
 							</div>
 						</div>
 					</div>
-
-					<div className="container pagination mx-auto">
-						<div className="btn-group mx-auto" role="group">
-							{Array.from({ length: 4 }, (_, index) => (
-								<button
-									type="button"
-									className="btn btn-primary rounded-1 mx-1"
-									key={index}
-								>
-									{index + 1}
-								</button>
-							))}
-						</div>
-					</div>
 				</div>
 			</div>
 		</>
