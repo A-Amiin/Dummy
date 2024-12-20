@@ -8,14 +8,13 @@ import { useSelector, useDispatch } from "react-redux";
 export default function Services() {
 	const services = useSelector((state) => {
 		return state.services;
-	  });
-	  const dispatch = useDispatch();
-	
-	  useEffect(() => {
-		dispatch(getServicesData())
-	  }, [dispatch])
+	});
+	const dispatch = useDispatch();
 
-	  console.log(services.servicesData);
+	useEffect(() => {
+		dispatch(getServicesData());
+	}, [dispatch]);
+
 	return (
 		<>
 			{/* <!-- banner --> */}
@@ -25,7 +24,7 @@ export default function Services() {
 				<section className="container py-5">
 					<div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-gap-4">
 						{services.servicesData.map((service) => (
-							<Card key={service.id} service = {service} />
+							<Card key={service.id} service={service} />
 						))}
 					</div>
 				</section>
