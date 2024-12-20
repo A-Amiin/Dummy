@@ -1,7 +1,8 @@
 
 import { Link } from "react-router";
+import "../../assets/styles/home.css";
 
-function AffordablePricingDetails({imgSrc, title, price, description }) {
+function AffordablePricingDetails({ imgSrc, title, price, description }) {
   return (
     <div className="col-12 col-sm-6 col-lg-4 mt-sm-3 mt-4">
       <div className="card overflow-hidden rounded-0 shadow-sm position-relative">

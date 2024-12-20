@@ -1,4 +1,4 @@
-import  { useEffect } from "react";
+import { useEffect } from "react";
 import bubble_affordable_pricing from "../../assets/images/bubble1.png";
 import figure_affordable_pricing from "../../assets/images/figure1.png";
 import SectionTitle from "../SectionTitle/SectionTitle";
@@ -37,24 +37,18 @@ function AffordablePricing() {
             colorParagraph="text-white"
           />
           <div className="row mt-5 mb-5">
-            {/* Column One */}
-
             {subscription.subscriptionData.map((subscripe) => (
-              <AffordablePricingCard
-                key={subscripe.id}
-                subscripeId= {subscripe.id}
-                imgSrc={bubble_affordable_pricing}
-                title={subscripe.title}
-                price={subscripe.price}
-                description={subscripe.description}
-              />
+              <div key={subscripe.id} className="col-12 col-sm-6 col-lg-4 mt-sm-3 mt-4">
+                <AffordablePricingCard
+                  key={subscripe.id}
+                  subscripeId={subscripe.id}
+                  imgSrc={bubble_affordable_pricing}
+                  title={subscripe.title}
+                  price={subscripe.price}
+                  description={subscripe.description}
+                />
+              </div>
             ))}
-
-            {/* Column Two */}
-
-            
-            {/* Column Three */}
-
           </div>
         </div>
       </section>

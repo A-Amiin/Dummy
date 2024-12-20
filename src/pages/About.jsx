@@ -31,7 +31,7 @@ function About() {
 				<div className="container">
 					<div className="row">
 						<div className="col-12 col-md-6 p-5">
-							<h5>know about us</h5>
+							<h5><a href="#our-working-experts">Know About Us</a></h5>
 							<br />
 							<h2>Doing Business Since 1992 in Cleaning Service.</h2>
 							<p>
@@ -119,7 +119,7 @@ function About() {
 			</section>
 
 			{/* ---------------------------------- */}
-			<section className="working_experts position-relative py-5">
+			<section id="our-working-experts" className="working_experts position-relative py-5">
 				<div className="container">
 					<div className="row text-center py-5">
 						<div className="col-12">

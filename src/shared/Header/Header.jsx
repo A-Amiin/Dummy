@@ -38,7 +38,7 @@ export default function Header() {
 
 			<nav className="navbar navbar-expand-lg navbar-light bg-light">
 				<div className="container">
-					<Link className="navbar-brand" to="#">
+					<Link className="navbar-brand" to="/">
 						<img
 							src={logo}
 							alt="Logo"
